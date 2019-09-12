@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+
+.calc-shell {
+  background-color: #E8ECD3;
+  /* background-image: linear-gradient(rgba( 255, 255, 255, 0.7), rgba( 255, 255, 255, 0.7)), url("images/benjamins.jpg"); */
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 2px 2px 16px 5px rgba(0, 0, 0, 0.5);
+  height: 550px;
+  margin: 30px auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 25vw;
+}
+
+.title {
+  background-color: #6F7362;
+  border: 1px solid transparent;
+  border-radius: 20px 20px 0 0;
+  color: #E8ECD3;
+  font-family: 'Playball', cursive;
+  padding: 2rem 2rem;
+}
+
+.bill-head {
+  text-align: center;
+}
+
+.bill-total-gather {
+  /* display: none; */
+  border-radius: .5rem;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.1);
+  margin: 64px auto;
+  width: 90%;
+}
+.dollar-break {
+  align-items: center;
+  margin-right: 0;
+}
+
+.bill-contents {
+  font-family: 'Merriweather', serif;
+}
+
+.bill-input {
+  height: calc(1.5em + 2rem + 2px);
+  font-family: 'Arial', serif;
+  font-size: 2.25rem;
+  margin: auto;
+  text-align: center;
+  width: 85%;
+}
+
+.tip-gather {
+  display: none;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 90%;
+}
+
+.percents {
+  font-size: 1.5rem;
+}
+
+.submit {
+  margin-top: 30px;
+}
+
+.result {
+  display: none;
+}
+
+#6F7362
+#E8ECD3
+#635A39

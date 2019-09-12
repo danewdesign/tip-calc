@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Tip Calculator</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Modak|Playball&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-fluid calc-shell">
+
+    <div class="jumbotron jumbotron-fluid title">
+      <h1>Tip Away</h1>
+    </div>
+    <!-- Bill Total Inquiry Card -->
+    <div class="card bill-total-gather">
+      <div class="card-header bill-head">
+        <h2>Bill Total</h2>
+      </div>
+      <div class="card-body bill-contents">
+        <div class="row dollar-break">
+          <div class="col-sm-2">
+            <h1>$</h1>
+          </div>
+          <div class="col-sm-10">
+            <input class="form-control form-control-lg bill-input" type="text" name="bill total" placeholder="00.00">
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="btn btn-dark btn-lg btn-block submit" type="button" name="button">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip Percentage Inquiry Card -->
+    <div class="card tip-gather">
+      <div class="card-header bill-head">
+        <h2>Tip Percentage</h2>
+      </div>
+      <div class="card-body bill-contents">
+        <div class="row dollar-break">
+          <div class="col-sm-4">
+            <button class="btn btn-danger percents" type="button" name="10%">10%</button>
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-warning percents" type="button" name="10%">15%</button>
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-success percents" type="button" name="10%">20%</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heading to display result -->
+    <div class="card card-body result">
+      <h1></h1>
+    </div>
+  </div>
+  <!-- JAVASCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="tipcalc.js" charset="utf-8"></script>
+</body>
+
+</html>
