@@ -84,6 +84,12 @@ body {
   text-align: center;
 }
 
+@media screen only (max-width: 500px) {
+  .calc-shell {
+    height: 100vh;
+    width: 100vw;
+  }
+}
 
 #6F7362
 #E8ECD3
