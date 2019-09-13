@@ -1,3 +1,26 @@
+/* media query for mobile */
+@media only screen and (max-width: 576px) {
+  .calc-shell {
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .tip-gather {
+    margin: 2.5rem auto;
+  }
+
+  .dollar-break {
+    text-align: center;
+  }
+
+  .percents {
+    margin-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+
 body {
   margin: 0;
 }
@@ -82,25 +105,4 @@ body {
 .reset {
   display: none;
   text-align: center;
-}
-
-@media only screen and (max-width: 576px) {
-  .calc-shell {
-    height: 90vh;
-    width: 90vw;
-  }
-
-  .tip-gather {
-    margin: 2.5rem auto;
-  }
-  
-  .dollar-break {
-    text-align: center;
-  }
-
-  .percents {
-    margin-top: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
