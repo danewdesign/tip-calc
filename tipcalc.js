@@ -1,3 +1,5 @@
+// required initial variables
+var tipStart = false;
 var billTotal;
 var tipPercentage;
 var result;
@@ -10,11 +12,13 @@ $(".submit").click(function() {
 
 // event handler to move to tip percentage upon pressing Enter
 $(document).keydown(function(key) {
-  if (event.key == $(".submit").attr("id")) {
-    theTab();
-    playSound();
+  if (tipStart == false) {
+    if (event.key == $(".submit").attr("id")) {
+      theTab();
+      playSound();
+      tipStart = true;
+    }
   }
-  console.log(event.key);
 });
 
 // event listener to store tip percentage in variable, fade out tip field, and fade in result
@@ -49,6 +53,7 @@ $(".clear").click(function() {
   $(".reset").slideUp(500);
   $(".bill-total-gather").slideDown(1000);
   $(".bill-input").val(undefined);
+  tipStart = false;
 });
 
 // function to play change sound when entering bill
