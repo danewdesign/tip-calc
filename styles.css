@@ -84,10 +84,26 @@ body {
   text-align: center;
 }
 
-@media screen only (max-width: 500px) {
+@media only screen and (max-width: 576px) {
   .calc-shell {
     height: 90vh;
     width: 90vw;
+<<<<<<< HEAD
+  }
+
+  .tip-gather {
+    margin: 2.5rem auto;
+  }
+  .dollar-break {
+    text-align: center;
+  }
+
+  .percents {
+    margin-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+=======
+>>>>>>> 9c917095cd90409b2bd9119647770a6e21a45df7
   }
 }
 
