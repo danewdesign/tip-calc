@@ -38,7 +38,7 @@ function tipCalc() {
   result = result.toFixed(2);
 
   $(".tip-gather").slideUp(700);
-  $(".result").html("Be kind and pay your waiter or waitress this much:<br>" + "<u>Tip: $" + result + "</u>");
+  $(".result").html("Be kind and tip your waiter or waitress this much:<br>" + "<u>Tip $" + result + "</u>");
   $(".result").slideDown(1000);
   $(".reset").slideDown(1200);
 }
