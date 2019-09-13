@@ -18,10 +18,11 @@
 <body>
   <div class="container-fluid calc-shell">
 
+<!-- HEADING -->
     <div class="jumbotron jumbotron-fluid title">
       <h1>Tip Away</h1>
     </div>
-    <!-- Bill Total Inquiry Card -->
+<!-- Bill Total Inquiry Card -->
     <div class="card bill-total-gather">
       <div class="card-header bill-head">
         <h2>Bill Total</h2>
@@ -32,16 +33,16 @@
             <h1>$</h1>
           </div>
           <div class="col-sm-10">
-            <input class="form-control form-control-lg bill-input" type="text" name="bill total" placeholder="00.00">
+              <input class="form-control form-control-lg bill-input" type="text" name="bill total" placeholder="0.00">
           </div>
         </div>
         <div class="button-container">
-          <button class="btn btn-dark btn-lg btn-block submit" type="button" name="button">Submit</button>
+          <button id="Enter" class="btn btn-dark btn-lg btn-block submit" type="button" name="button">Submit</button>
         </div>
       </div>
     </div>
 
-    <!-- Tip Percentage Inquiry Card -->
+<!-- Tip Percentage Inquiry Card -->
     <div class="card tip-gather">
       <div class="card-header bill-head">
         <h2>Tip Percentage</h2>
@@ -49,24 +50,29 @@
       <div class="card-body bill-contents">
         <div class="row dollar-break">
           <div class="col-sm-4">
-            <button class="btn btn-danger percents" type="button" name="10%">10%</button>
+            <button class="btn btn-danger percents" type="button" value="10">10%</button>
           </div>
           <div class="col-sm-4">
-            <button class="btn btn-warning percents" type="button" name="10%">15%</button>
+            <button class="btn btn-warning percents" type="button" value="15">15%</button>
           </div>
           <div class="col-sm-4">
-            <button class="btn btn-success percents" type="button" name="10%">20%</button>
+            <button class="btn btn-success percents" type="button" value="20">20%</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Heading to display result -->
+<!-- Heading to display result -->
     <div class="card card-body result">
-      <h1></h1>
+    </div>
+
+<!-- RESET BUTTON -->
+    <div class="reset">
+      <button class="btn btn-secondary btn-lg clear" type="button" name="button">Reset Calc</button>
     </div>
   </div>
-  <!-- JAVASCRIPTS -->
+
+<!-- JAVASCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
