@@ -3,21 +3,45 @@ var tipStart = false;
 var billTotal;
 var tipPercentage;
 var result;
+var hasInput = false;
+var maxChar;
+
+// detect change on focus of input field so that will only execute if has a value
+$(".bill-input").change(function() {
+  hasInput = true;
+});
+
+$(document).on('input','.bill-input',function() {
+    var a = $(this).val();
+    if (a.length > 6) {
+        a = a.replace(/[^1-6]/g, '');
+        $(this).val(a > 5 ? 6 : 0);
+  }
+});
 
 // event listener to run theTab function below
 $(".submit").click(function() {
-  theTab();
-  playSound();
+  if (tipStart == false && hasInput == true) {
+    theTab();
+    playSound();
+    tipStart = true;
+  }
 });
 
 // event handler to move to tip percentage upon pressing Enter
 $(document).keydown(function(key) {
-  if (tipStart == false) {
+  if (tipStart == false && hasInput == true) {
     if (event.key == $(".submit").attr("id")) {
       theTab();
       playSound();
-      tipStart = true;
     }
+    tipStart = true;
+  }
+});
+
+$(document).keydown(function(event) {
+  if (event.key == "e" || event.key == "+" || event.key == "-") {
+    $(".bill-input").val(undefined).blur();
   }
 });
 
@@ -42,7 +66,7 @@ function tipCalc() {
   result = result.toFixed(2);
 
   $(".tip-gather").slideUp(700);
-  $(".result").html("Be kind and tip your waiter or waitress this much:<br>" + "<u>Tip $" + result + "</u>");
+  $(".result").html("Be kind and tip your waiter or waitress this much:<br>" + "Tip $" + result);
   $(".result").slideDown(1000);
   $(".reset").slideDown(1200);
 }
