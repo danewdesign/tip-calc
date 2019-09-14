@@ -11,11 +11,12 @@ $(".bill-input").change(function() {
   hasInput = true;
 });
 
-$(document).on('input','.bill-input',function() {
+// event handler to only allow max 6 character input then returns to empty
+$(document).on('input', '.bill-input', function() {
     var a = $(this).val();
     if (a.length > 6) {
-        a = a.replace(/[^1-6]/g, '');
-        $(this).val(a > 5 ? 6 : 0);
+        a = a.replace('');
+        $(this).val(a);
   }
 });
 
@@ -78,6 +79,7 @@ $(".clear").click(function() {
   $(".bill-total-gather").slideDown(1000);
   $(".bill-input").val(undefined);
   tipStart = false;
+  hasInput = false;
 });
 
 // function to play change sound when entering bill
